@@ -7,9 +7,7 @@ Various notes about working with Linux for group computers.
 It is good practice to use ```sudo ...``` or root access sparingly or not at all. Most applications can be installed as a flatpak via [Flathub](https://flathub.org/home). Flatpak is a packaging format that allows software installation that is (1) independent of the linux distribution, (2) sanboxed, (3) runs applications in user space, (4) are curated from a central repository like Flathub, and (5) are frequently automatically updated. Combined this reduces security risks and improves system stabilty. You may need to enable Flathub as a valid repository.
 
 ```bash
-[use@host ~]$ flatpak remote-add --if-not-exist
-s flathub https://flathub.org/repo/flathub.
-flatpakrepo
+[use@host ~]$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 An alternative for running software in user space are Appimage packages. Appimage packages are binary packages that also run independendent of the distribution. However, Appimages are often downloaded directly from the source (e.g. developer website) and this results in a slightly higher security risk. Appimages posted on GitHub and of popular software are generally safe to use. Examples of Appimages are [belanaEtcher](https://www.balena.io/etcher/) or [neovim](https://github.com/neoim/nevim/releases). Furthermore Appimages do not automatically update, so the onus is on you to check for new versions.
