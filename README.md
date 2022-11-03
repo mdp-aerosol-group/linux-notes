@@ -91,3 +91,14 @@ Flatpak apps are sanboxed. Drag and drop requires that the flatpak app has permi
 
 It should be possible now to drag an image from the file system to google slides.
 
+## User permissions
+- make data group
+- add people to data group
+- add device to fstab
+
+UUID=.... /mnt/data               xfs     defaults        1 2
+
+- change access controls
+setfacl -dm g::rwx data/
+
+
